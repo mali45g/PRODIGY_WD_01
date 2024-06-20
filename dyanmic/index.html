@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Navigation Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-left">
+            <input type="text" id="search" placeholder="Search..." oninput="filterContent()">
+        </div>
+        <ul class="nav-center">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li class="dropdown">
+                <a href="#services" class="dropbtn">Services</a>
+                <div class="dropdown-content">
+                    <a href="#web">Web Development</a>
+                    <a href="#design">Design</a>
+                    <a href="#seo">SEO</a>
+                </div>
+            </li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-right">
+            <button id="toggle-dark-mode">Toggle Dark Mode</button>
+        </div>
+    </nav>
+
+    <section id="home">
+        <h1>Home Section</h1>
+        <div class="slider">
+            <div class="slide" style="background-image: url('https://via.placeholder.com/800x400/333333/FFFFFF?text=Slide+1');"></div>
+            <div class="slide" style="background-image: url('https://via.placeholder.com/800x400/555555/FFFFFF?text=Slide+2');"></div>
+            <div class="slide" style="background-image: url('https://via.placeholder.com/800x400/777777/FFFFFF?text=Slide+3');"></div>
+        </div>
+        <p>Welcome to our website! We are glad to have you here. Explore our services and get to know more about us.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pretium, risus at pretium varius, purus nisl dignissim lacus, non congue nisi est id nisi.</p>
+    </section>
+    <section id="about">
+        <h1>About Section</h1>
+        <button class="collapsible">Read More</button>
+        <div class="content">
+            <p>Our company was founded on the principles of excellence and innovation. We strive to deliver the best services to our clients.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor.</p>
+        </div>
+    </section>
+    <section id="services">
+        <h1>Services Section</h1>
+        <div class="service" id="web">
+            <h2>Web Development</h2>
+            <div class="service-content">
+                <p>We offer top-notch web development services to help you build a strong online presence.</p>
+                <button class="learn-more">Learn More</button>
+                <div class="service-details">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquet enim tortor, at bibendum eros auctor non.</p>
+                </div>
+            </div>
+        </div>
+        <div class="service2" id="design">
+            <h2>Design</h2>
+            <div class="service-content">
+                <p>Our design team creates visually appealing and user-friendly designs that captivate your audience.</p>
+                <button class="learn-more">Learn More</button>
+                <div class="service-details">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum pellentesque imperdiet.</p>
+                </div>
+            </div>
+        </div>
+        <div class="service3" id="seo">
+            <h2>SEO</h2>
+            <div class="service-content">
+                <p>Improve your website's visibility on search engines with our expert SEO services.</p>
+                <button class="learn-more">Learn More</button>
+                <div class="service-details">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h1>Contact Section</h1>
+        <p>Get in touch with us to learn more about our services or to get a quote.</p>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

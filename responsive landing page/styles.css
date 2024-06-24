@@ -1,0 +1,228 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.hero-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    transition: background-color 0.5s;
+    animation: fadeIn 2s ease-in;
+    background: linear-gradient(135deg, #ff6347, #6a5acd);
+    position: relative; /* Ensure relative positioning for absolute nav */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: -180px; /* Adjust based on the width of the navbar */
+    margin-top: 20%;
+    width: 180px; /* Adjust based on your content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 20px 0 0 20px;
+    padding: 10px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.hero-section:hover + nav,
+nav:hover {
+    right: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 10px 0;
+    text-align: right;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    transition: color 0.3s, padding-right 0.3s, background-color 0.3s;
+    border-radius: 20px 0 0 20px;
+}
+
+nav ul li a span {
+    margin-left: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+    padding-right: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    
+}
+
+nav ul li a:hover span {
+    opacity: 1;
+}
+
+.headline {
+    font-size: 3em;
+    animation: textPopUp 1s ease-out;
+}
+
+.subheadline {
+    font-size: 1.5em;
+    animation: textPopUp 1.5s ease-out;
+}
+
+@keyframes textPopUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#about, #skills, #contact {
+    background: #f4f4f4;
+    margin: 0;
+    padding: 50px 20px;
+    animation: fadeInSection 1s ease-in;
+}
+
+@keyframes fadeInSection {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+h2 {
+    margin-top: 0;
+    animation: slideInLeft 1s ease-in-out;
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-50px); }
+    to { transform: translateX(0); }
+}
+
+.about-text, .contact-form {
+    animation: fadeInUp 1s ease-in;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill-card {
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 200px;
+    animation: fadeInUp 1s ease-in;
+}
+
+.skill-card p {
+    margin: 0 0 10px 0;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+.progress-bar::before {
+    content: "";
+    display: block;
+    height: 100%;
+    background-color: #4caf50;
+    width: 0;
+    border-radius: 10px;
+    animation: fillBar 2s forwards;
+}
+
+@keyframes fillBar {
+    from { width: 0; }
+    to { width: var(--skill-level); }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+    position: relative;
+    margin-top: auto; /* Push footer to the bottom of the page */
+}
+
+footer p {
+    margin: 0;
+}

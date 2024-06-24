@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="hero-section" id="home">
+        <nav>
+            <ul>
+                <li><a href="#home"><i class="fas fa-home"></i><span>Home</span></a></li>
+                <li><a href="#about"><i class="fas fa-user"></i><span>About Me</span></a></li>
+                <li><a href="#skills"><i class="fas fa-cogs"></i><span>Skills</span></a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h1 class="headline">Welcome to My Landing Page</h1>
+            <p class="subheadline">A place where creativity meets technology</p>
+        </div>
+    </div>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p class="about-text">Welcome! I am a professional web developer and graphic designer...</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <p>HTML & CSS</p>
+                <div class="progress-bar" data-skill-level="90"></div>
+            </div>
+            <div class="skill-card">
+                <p>JavaScript</p>
+                <div class="progress-bar" data-skill-level="80"></div>
+            </div>
+            <div class="skill-card">
+                <p>React.js</p>
+                <div class="progress-bar" data-skill-level="75"></div>
+            </div>
+            <div class="skill-card">
+                <p>Node.js</p>
+                <div class="progress-bar" data-skill-level="70"></div>
+            </div>
+            <div class="skill-card">
+                <p>Graphic Design</p>
+                <div class="progress-bar" data-skill-level="85"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Muhammad Rehan. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
